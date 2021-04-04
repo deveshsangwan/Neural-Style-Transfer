@@ -1,6 +1,6 @@
 import os
 import uuid
-
+from waitress import serve
 from flask import (Flask, flash, redirect, render_template, request,
                    send_from_directory, url_for)
 
@@ -80,4 +80,5 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    #app.run(host='0.0.0.0')
+    serve(app, listen='0.0.0.0:5003')
