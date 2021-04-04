@@ -218,4 +218,4 @@ def main(base_image_path, style_image_path):
     data.save('static/images/img.jpg')
     return 'img.jpg'
 
-main()
+#main()
