@@ -66,9 +66,9 @@ def upload_file():
                 #                        filename=filename))
         result_filename = main(file_names[0], file_names[1])
         params={
-            'content': "/neural_style/static/images/" + file_names[0],
-            'style': "/neural_style/static/images/" + file_names[1],
-            'result': "/neural_style/static/images/" + result_filename
+            'content': "../static/images/" + file_names[0],
+            'style': "../static/images/" + file_names[1],
+            'result': "../static/images/" + result_filename
         }
         return render_template('success.html', **params)
     return render_template('upload.html')
